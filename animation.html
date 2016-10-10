@@ -10,12 +10,15 @@
       <circle cx="300" cy="300" r="150"
       fill="yellow"/>
       <ellipse cx="250" cy="250" rx="29" ry="29">
-        <animate id="eli1"
-    </elipse>
+        <animate id="eli1" attributeName="cx" from="300" to="400" dur="3s" begin="0s"/>
+          <animate id="eli1" attributeName="cx" from="300" to="400" dur="3s" begin="eli1.end" fill="freeze"repeatcount="indefinite"/>
+    </ellipse>
       <ellipse cx="350" cy="250" rx="29" ry="29"/>
       <line x1="200" y1="320" x2="380" y2="320"  stroke= "red" stroke-width="8"/>
-      <rect x="280" y="350" width="23" height="46"/>
-
+      <rect x="280" y="350" width="23" height="46">
+    <animate id="rect1" attributeName="y" from="300" to="400" dur="3s" begin="click"/>
+    <animate id="rect2" attributeName="y" from="300" to="400" dur="3s" begin="rect1"/>
+  </rect>
 
 
 
