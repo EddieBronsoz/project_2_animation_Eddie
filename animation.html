@@ -7,18 +7,28 @@
   <body>
     <h1>Animations</h1>
     <svg width="600" height="600">
-      <circle cx="300" cy="300" r="150"
+      <circle cx="300" cy="300" r="150" opacity=".5">
       fill="yellow"/>
+      <animate id="circ1" attributeName="cy" from="150" to="300" dur="3s" begin="0s"/>
+       <animate id="circ2" attributeName="cx" from="300" to="360" dur="3s" begin="circ1.end" fill="freeze" repeatcount="indefinite"/>
+        </circle>
       <ellipse cx="250" cy="250" rx="29" ry="29">
         <animate id="eli1" attributeName="cx" from="300" to="400" dur="3s" begin="0s"/>
-          <animate id="eli1" attributeName="cx" from="300" to="400" dur="3s" begin="eli1.end" fill="freeze"repeatcount="indefinite"/>
+          <animate id="eli1" attributeName="cx" from="300" to="400" dur="3s" begin="eli1.end" fill="freeze" repeatcount="indefinite"/>
     </ellipse>
       <ellipse cx="350" cy="250" rx="29" ry="29"/>
-      <line x1="200" y1="320" x2="380" y2="320"  stroke= "red" stroke-width="8"/>
       <rect x="280" y="350" width="23" height="46">
     <animate id="rect1" attributeName="y" from="300" to="400" dur="3s" begin="click"/>
     <animate id="rect2" attributeName="y" from="300" to="400" dur="3s" begin="rect1"/>
   </rect>
+    <line x1="200" y1="320" x2="380" y2="320"  stroke="red" stroke-width="8">
+   <animate id="line1" attributeName="x1" from="100" to="400" dur="3s" begin="click"/>
+   <animate id="line2" attributeName="x1" from="300" to="400" dur="3s" begin="line1"/>
+</line>
+<p> I made a happy face.  I used circles, ellipses and circles.
+ Pac man inspired me.</p>
+
+
 
 
 
